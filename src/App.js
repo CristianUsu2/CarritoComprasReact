@@ -1,25 +1,52 @@
 import logo from './logo.svg';
 import './App.css';
+import {Component} from 'react';
+import Productos from './Components/Productos';
+import Layout from './Components/Layout';
+import Nav from './Components/Nav';
 
-function App() {
+class App extends Component{
+  state={
+    productos:[
+      {Name:"Tomate",Price:"1200",Image:"/img/tomate.jpg"},
+      {Name:"Lechuga",Price:"2000",Image:"/img/lechuga.jpg"},
+      {Name:"Arbeja",Price:"1200",Image:"/img/arbejas.jpg"}
+    ],
+    carro:[
+
+    ]
+  }
+  AgregarCarrito=(producto)=>{
+    let existe=false;
+    if(this.state.carro != null){
+      const productos=this.state.carro
+      const index=productos.findIndex(e=>e.Name === producto.Name)
+      if(index !=-1){
+        productos[index].cantidad+=1;
+        existe=true;
+        this.setState({...productos})
+      }
+      if(existe == false){
+        return this.setState({
+          carro:this.state.carro.concat({...producto,cantidad:1})
+        })
+      }
+      
+    }
+   
+  }
+
+  render() {
+  console.log(this.state.carro)
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <div>
+    <Nav Productos={this.state.carro}/>
+    <Layout>  
+     <Productos Productos={this.state.productos} AgregarCarrito={(this.AgregarCarrito)}/>
+     </Layout>
+     </div>
+    )
+  }
 }
 
 export default App;

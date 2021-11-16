@@ -1,0 +1,178 @@
+.titulo{
+    color:#000;
+    font-family:Arial, Helvetica, sans-serif;
+    font-size: 1.5em;
+    text-align:center;
+}
+
+.card{
+  margin-top:105px;
+  margin-left: 20px;
+  margin-right: 20px;
+  font-family: Arial;
+  width: 380px;
+  height: 350px;
+  box-shadow: 1px 5px 5px rgba(0,0,0,0.3);
+  cursor: pointer;
+}
+
+.padre{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.precio{
+    font-family: Arial;
+    font-size: 1.2em;
+    text-align: center; 
+}
+
+.imagen{
+    display:block;
+    margin:auto;
+    width:250px;
+    height: 180px;
+    object-fit: cover;
+    color:aqua;
+}
+
+.boton{
+    background-color: #054B22;
+    color:blanchedalmond;
+    padding: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    width:300px;
+    font-weight: 100;
+    font-size: 0.9em;
+    display: block;
+    margin: auto;
+    cursor: pointer;
+    border: 1px solid #000;
+    border-radius: 20px;
+    outline: none;
+    transition: 1s ease-in-out;
+}
+
+.boton:hover{
+    transition: 1s ease-in-out;
+    background: #6FB991;
+      
+}
+
+.layout{
+    display: flex;
+    background-color: #fff;
+    flex-direction: column;
+    align-items: center;
+}
+
+.container{
+    width: 1200px;
+}
+
+.Menu{
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+    height: 80px;
+    width: 100%;
+    justify-content: space-between;
+    position:relative;
+    box-shadow: 0 2px 0 rgba(0,0,0,0.3);
+}
+
+.Logo{
+    font-size:1.3em;
+    font-family: Arial, Helvetica, sans-serif;
+    color: black;
+    margin-left: 30px;
+}
+
+.Carrito{
+    font-size: 1.2em;
+    background-color:#054B22;
+    border-radius: 30%;
+    font-weight: 100;
+    padding: 14px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: whitesmoke;
+    margin-right: 30px;
+    cursor: pointer;
+    position:absolute;
+    right: 20px;
+    top: -3px;
+}
+
+
+
+.AlertaProductos{
+    background-color: tomato;
+    position: absolute;
+    color: thistle;
+    padding: 10px;
+    width: 8px;
+    height: 3px;
+    border-radius: 25%;
+    display: flex;
+    align-items: center;
+    float: right !important;
+    right: 28px;
+    top: 3px;
+    z-index: 100;
+}
+.NumeroProducto{
+    color:black;
+    margin-top: 1px;
+    margin-left: 0px;
+    margin-right: 15px;
+}
+.DivLista{
+    display:flex;
+    position: relative;
+    flex-direction: column;
+    justify-content: flex-end;
+    margin-right: 30px;
+    margin-top: 420px;
+    background-color:#054B22;
+    width: 300px;
+    height: 100px
+}
+
+.DetallesProducto{
+    margin-top: 150px;
+    margin-right: 70px;
+    height: 90px;
+    width: 300px;
+    display: flex;
+    border-radius: 20px;
+}
+li{
+    list-style-type:none;
+    margin-bottom: 10px;
+    background-color: #E1E5E2;
+    width: 200px;
+    height: 67px;
+    border-radius: 20px;
+    padding: 20px;
+}
+.Prod-detalles{
+    width: 100px;
+    object-fit: cover;
+    margin-right: 1000px;
+}
+.SeccionDescrip{
+   width: 100px;
+   height: 90px;
+   position:relative;
+   top: -80px; 
+   left: 120px;
+   display: flex;
+   flex-direction: column;
+}
+
+.SeccionDescrip p{
+    margin-bottom: -12px;
+    font-family: Arial;
+    font-size: 1em;
+}
