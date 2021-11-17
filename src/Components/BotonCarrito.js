@@ -21,7 +21,7 @@ class BotonCarrito extends Component {
         <>    
         <p className="Carrito" onClick={this.CambiarEstado.bind(this)}>Carro</p>
         <AlertaItems Items={productos}></AlertaItems>  
-        {this.state.Mostrar== true ? <Detalles productos={productos}/> : console.log("No se muestra", this.state.Mostrar)} 
+        {this.state.Mostrar== true ? <Detalles productos={productos}/> : console.log("No se muestra porque no le dieron click", this.state.Mostrar)} 
         
          </>
         )
